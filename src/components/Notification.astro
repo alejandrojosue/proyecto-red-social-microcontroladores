@@ -1,0 +1,53 @@
+---
+interface Props {
+  name: string;
+  urlImageUser: String;
+  action: String; // ha empezado a seguirte | le ha dado me gusta a tu foto
+  isFollower: boolean;
+}
+const { name, urlImageUser, action, isFollower } = Astro.props;
+---
+
+<div
+  class="container shadow mb-4 bg-green-200 px-5 py-2 d-flex align-items-center justify-content-between"
+>
+  <div class="d-flex align-items-center">
+    <img
+      class="rounded-circle"
+      src={urlImageUser + ""}
+      alt="..."
+      width="50"
+      height="50"
+    />
+    <span class="mx-2 text-white fw-semibold">
+      <span class="text-capitalize">{name}</span>
+      {action}
+    </span>
+  </div>
+  <div class="">
+    {
+      isFollower ? (
+        <>
+          <button class="btn bg-green-100 mx-2 end fw-semibold shadow-sm">
+            Seguir También
+          </button>
+          <button class="btn bg-green-100 text-danger fw-semibold shadow-sm">
+            Bloquear
+          </button>
+        </>
+      ) : (
+        <img class="mx-auto" src="/assets/img/1.jpg" width="50" height="50" />
+      )
+    }
+  </div>
+</div>
+<style>
+  .container {
+    border-radius: 20px;
+  }
+  img {
+    object-fit: cover;
+    min-width: 50px;
+    min-height: 50px;
+  }
+</style>

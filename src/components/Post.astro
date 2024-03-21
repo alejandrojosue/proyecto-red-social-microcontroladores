@@ -1,0 +1,86 @@
+---
+interface Props {
+    urlImageUser: String;
+    username: String;
+    urlImagePost: string;
+    likesCount: number;
+    description: String;
+}
+
+const {
+    urlImageUser,
+    urlImagePost,
+    username,
+    likesCount = 300,
+    description = "Dia duro de trabajo, pero con cristo rey todo es posible.",
+} = Astro.props;
+---
+
+<style>
+    .container {
+        width: 80%;
+        margin: 20px auto;
+        padding: 20px;
+        max-height: 400px;
+        overflow-y: auto;
+    }
+    .post {
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .profile {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .profile img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    .like-button,
+    .share-button,
+    .copy-button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        margin-right: 10px;
+    }
+    .action-buttons {
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+    }
+    .like-count,
+    .share-count {
+        margin-right: 5px;
+    }
+    .post-image {
+        max-width: 100%;
+        margin-bottom: 10px;
+        height: 300px;
+        object-fit: cover;
+    }
+</style>
+<div class="post p-5 bg-green-100">
+    <div class="profile">
+        <img src={urlImageUser + ""} alt="Imagen de perfil del usuario" />
+        <h3>{username}</h3>
+    </div>
+
+    <img class="post-image" src={urlImagePost} alt="Fotografía" />
+    <div class="action-buttons">
+        <button class="like-button"
+            ><i class="far fa-heart"></i>
+            <span class="like-count">{likesCount}</span>
+        </button>
+        <!-- <button class="share-button"><i class="fas fa-share"></i> <span class="share-count"></span> </button> -->
+        <!-- <button class="copy-button"><i class="far fa-copy"></i> </button> -->
+    </div>
+    <p class="fw-semibold">Dia duro de trabajo, pero con cristo rey todo es posible.</p>
+</div>

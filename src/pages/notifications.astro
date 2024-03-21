@@ -1,0 +1,19 @@
+---
+import Notification from "../components/Notification.astro"
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout title="Notifications">
+ <Notification
+  name={"Edgardo cruzs"}
+  urlImageUser={"assets/img/1.jpg"}
+  action={"ha empezado a seguirte"}
+  isFollower={false}
+ />
+ <Notification
+  name={"Edgardo cruzs"}
+  urlImageUser={"assets/img/1.jpg"}
+  action={"le ha dado me gusta a tu foto"}
+  isFollower={true}
+ />
+</Layout>

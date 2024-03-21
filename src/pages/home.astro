@@ -1,0 +1,22 @@
+---
+import Post from "../components/Post.astro";
+import Layout from "../layouts/Layout.astro";
+// if (!Astro.cookies.get("user")) return Astro.redirect("/lol")
+---
+
+<Layout title="Home">
+     <Post
+          urlImagePost={"assets/img/publi1.jpg"}
+          username={"Elviz Cruz"}
+          urlImageUser={"assets/img/1.jpg"}
+          likesCount={300}
+          description={"Dia duro de trabajo, pero con cristo rey todo es posible."}
+     />
+     <Post
+     urlImagePost={"assets/img/publi1.jpg"}
+     username={"Elviz Cruz"}
+     urlImageUser={"assets/img/1.jpg"}
+     likesCount={300}
+     description={"Dia duro de trabajo, pero con cristo rey todo es posible."}
+/>
+</Layout>
