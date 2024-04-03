@@ -1,0 +1,14 @@
+.mypost{
+ width: 220px;
+ height: 220px;
+}
+
+.mypost img{
+ width: inherit;
+ height: inherit;
+}
+.mypost .container-total-likes{
+ background-color: rgba(0, 0, 0, .5);
+ width: inherit;
+ height: inherit;
+}

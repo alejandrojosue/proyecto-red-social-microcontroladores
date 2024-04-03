@@ -12,9 +12,8 @@
   "dependencies": {
     "@astrojs/check": "^0.5.9",
     "astro": "^4.5.5",
+    "socket.io": "^4.7.5",
     "typescript": "^5.4.2"
-  },
-  "devDependencies": {
   },
   "eslintConfig": {
     "extends": "./node_modules/standard/eslintrc.json"

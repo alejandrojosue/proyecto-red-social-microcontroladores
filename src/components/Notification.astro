@@ -9,7 +9,7 @@ const { name, urlImageUser, action, isFollower } = Astro.props;
 ---
 
 <div
-  class="container shadow mb-4 bg-green-200 px-5 py-2 d-flex align-items-center justify-content-between"
+  class="container shadow mb-4 bg-200 px-5 py-2 d-flex align-items-center justify-content-between"
 >
   <div class="d-flex align-items-center">
     <img
@@ -28,10 +28,10 @@ const { name, urlImageUser, action, isFollower } = Astro.props;
     {
       isFollower ? (
         <>
-          <button class="btn bg-green-100 mx-2 end fw-semibold shadow-sm">
+          <button class="btn bg-100 m-1 end fw-semibold shadow-sm">
             Seguir También
           </button>
-          <button class="btn bg-green-100 text-danger fw-semibold shadow-sm">
+          <button class="btn bg-100 m-1 text-danger fw-semibold shadow-sm">
             Bloquear
           </button>
         </>

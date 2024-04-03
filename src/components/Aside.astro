@@ -1,60 +1,58 @@
 ---
 interface Props {
- urlImageUser: String
- fullNameUser: String
- username: String
- followersCount: number
- followingsCount: number
+ urlImageUser: String;
+ fullNameUser: String;
+ username: String;
+ followersCount: number;
+ followingsCount: number;
 }
 
-const {urlImageUser, fullNameUser, username, followersCount, followingsCount} = Astro.props
+const {
+ urlImageUser,
+ fullNameUser,
+ username,
+ followersCount,
+ followingsCount,
+} = Astro.props;
 ---
 
-<aside class="col-3">
- <div class="card shadow-lg">
-  <br /><br />
-  <div class="tab-content" id="myTabContent">
-   <div
-    class="tab-pane fade show active"
-    id="home-tab-pane"
-    role="tabpanel"
-    aria-labelledby="home-tab"
-    tabindex="0"
-   >
-    <div class="row">
-     <div class="col-md-12">
-      <div class="card shadow-lg">
-       <div class="card-body text-center">
-        <img
-         class="img-thumbnail mt-3"
-         src={urlImageUser + ""}
-         alt="Imagen de usuario"
-         width="150"
-        />
+<aside class="col-lg-3">
+ <br /><br />
+ <div
+  class="tab-pane fade show active"
+  id="home-tab-pane"
+  role="tabpanel"
+  aria-labelledby="home-tab"
+  tabindex="0"
+ >
+  <div class="row">
+   <div class="col-md-12">
+    <div class="aside-border-rounded aside-size h-100 bg-200 text-white card">
+     <div class="card-body text-center">
+      <img
+       class="img-thumbnail mt-3 border-0"
+       src={urlImageUser + ""}
+       alt="Imagen de usuario"
+       width="150"
+      />
 
-        <div class="row">
-         <div class="col">
-          <p>{fullNameUser}</p>
-         </div>
-        </div>
-        <div class="row">
-         <div class="col">
-          <p>@{username}</p>
-         </div>
-        </div>
+      <div class="row">
+        <p class="fs-4">{fullNameUser}</p>
+      </div>
+      <div class="row">
+        <p>@{username}</p>
+      </div>
 
-        <hr />
-        <div class="row">
-         <div class="col">
-          <p>Seguidores {followersCount}</p>
-         </div>
-        </div>
-        <hr />
-        <div class="row">
-         <div class="col">
-          <p>Seguidos {followingsCount}</p>
-         </div>
-        </div>
+      <hr />
+      <div class="row">
+       <div class="col">
+        <p>Seguidores {followersCount}</p>
+       </div>
+      </div>
+      <hr />
+      <div class="row">
+       <div class="col">
+        <p>Seguidos {followingsCount}</p>
        </div>
       </div>
      </div>

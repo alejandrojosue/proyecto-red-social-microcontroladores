@@ -1,11 +1,10 @@
 ---
 import { ViewTransitions } from "astro:transitions";
 import Navbar from "../components/Navbar.astro";
-import Aside from "../components/Aside.astro";
 interface Props {
 	title: string;
 }
-const { title = "Home" } = Astro.props;
+const { title = "Perfil" } = Astro.props;
 ---
 
 <!doctype html>
@@ -35,17 +34,10 @@ const { title = "Home" } = Astro.props;
 	<body>
 		<Navbar />
 
-		<div class="container-fluid">
+		<div class="container">
 			<div class="row">
-				<Aside
-					urlImageUser={"/assets/img/1.jpg"}
-					fullNameUser={"Edgardo Romero"}
-					username={"REd"}
-					followersCount={300}
-					followingsCount={10000}
-				/>
-				<main class="posts col-lg-9">
-					<div class="row border px-4 py-4">
+				<main class="posts col-lg-12">
+					<div class="row px-4 py-4">
 						<slot />
 					</div>
 				</main>

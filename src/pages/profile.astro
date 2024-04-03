@@ -1,0 +1,37 @@
+---
+import LayoutProfile from "../layouts/LayoutProfile.astro"
+import MyPost from "../components/MyPost.astro"
+---
+
+<LayoutProfile title="Perfil">
+ <div class="col-lg-6 px-5 py-4 mx-auto d-flex text-shadow border-right-200">
+  <img src="assets/img/1.jpg" class="rounded-circle" width="150" height="150" alt="...">
+  <div class="d-flex flex-column justify-content-center mx-auto text-center">
+   <p class="fs-3">Edgardo Rafael</p>
+   <span class="fs-5">@Cs_edgardo</span>
+  </div>
+ </div>
+ <div class="col-lg-6 px-5 py-4 mx-auto d-flex text-shadow">
+  <div class="col d-flex flex-column text-center justify-content-center">
+   <p class="fs-3">
+    Seguidores
+   </p>
+   <span class="fs-3">300</span>
+  </div>
+  <div class="col d-flex flex-column text-center justify-content-center">
+   <p class="fs-3">
+    Seguidos
+   </p>
+   <span class="fs-3">330</span>
+  </div>
+ </div>
+ <div class="row px-5 py-3 mt-4 bg-100 border-top-200">
+  <MyPost totalLikes={12} urlImg="assets/img/1.jpg"/>
+  <MyPost totalLikes={42} urlImg="assets/img/publi1.jpg"/>
+  <MyPost totalLikes={1} urlImg="assets/img/1.jpg"/>
+  <MyPost totalLikes={42} urlImg="assets/img/1.jpg"/>
+  <MyPost totalLikes={55} urlImg="assets/img/1.jpg"/>
+  <MyPost totalLikes={100} urlImg="assets/img/1.jpg"/>
+  <MyPost totalLikes={0} urlImg="assets/img/1.jpg"/>
+ </div>
+</LayoutProfile>

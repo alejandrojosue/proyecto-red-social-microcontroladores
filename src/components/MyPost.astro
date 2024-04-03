@@ -1,0 +1,21 @@
+---
+interface Props {
+ totalLikes: number
+ urlImg: string
+}
+
+const { totalLikes, urlImg } = Astro.props;
+---
+
+<div class="mypost m-2">
+ <img
+  src={urlImg}
+  class="position-absolute"
+  alt="..."
+ />
+ <div
+  class="container-total-likes text-white fw-semibold d-flex text-center fs-1 position-absolute"
+ >
+  <p class="m-auto"><span class="fas fa-heart"></span> {totalLikes}</p>
+ </div>
+</div>

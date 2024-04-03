@@ -1,6 +1,9 @@
 ---
 import Post from "../components/Post.astro";
 import Layout from "../layouts/Layout.astro";
+import fetchFromApi from "../services/redSocial"
+await fetchFromApi()
+
 // if (!Astro.cookies.get("user")) return Astro.redirect("/lol")
 ---
 

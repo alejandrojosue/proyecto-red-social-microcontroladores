@@ -1,3 +1,8 @@
+---
+title: 'Readme'
+layout: '../layouts/Layout.astro'
+---
+
 # Proyecto Red Social
 
 ### Ejecutar proyecto en modo desarrollo
@@ -33,9 +38,8 @@ Dentro de su proyecto Astro, verá las siguientes carpetas y archivos:
 │   │   └── Post.astro
 │   ├── css/
 │   │   ├── config/
-│   │   │   └── colors.css
-│   │   ├── includes/
-│   │   │   └── aside.css
+│   │   │   └── config/
+│   │   │       └── colors.css
 │   │   └── style.css
 │   ├── layouts/
 │   │   └── Layout.astro
@@ -43,9 +47,8 @@ Dentro de su proyecto Astro, verá las siguientes carpetas y archivos:
 │   │   ├── home.astro
 │   |   ├── index.astro
 │   |   └── notifications.astro
-│   ├── services/
-│   |   └── redSocial.ts
-│   └── types/
+│   └── services/
+│       └── redSocial.ts
 └── package.json
 ```
 
@@ -55,13 +58,9 @@ En `src/components/` es donde se colocan los componentes hechos con Astro/React/
 
 Cualquier activo estático, como imágenes, se puede colocar en el directorio `public/`.
 
-Directorio `src/services/` es donde se crearan todas las conexiones a las apis que deba conectarse para mantener totalmente funcional el proyecto.
-
-Todos los tipos de datos enviados u obtenidos por la api se encontrarán en `src/types/` 
-
 ## 🧞 Comandos
 
-Todos los comandos se ejecutan desde la raíz del proyecto, desde una terminal.
+Todos los comandos se ejecutan desde la raíz del proyecto, desde una terminal:Todos los comandos se ejecutan desde la raíz del proyecto, desde una terminal:
 
 | Command                   | Action                                                |
 | :------------------------ | :-----------------------------------------------      |
