@@ -1,5 +1,10 @@
 # Proyecto Red Social
 
+### Instalar dependencias
+```sh
+npm install
+```
+
 ### Ejecutar proyecto en modo desarrollo
 ```sh
 npm run dev
