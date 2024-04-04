@@ -1,6 +1,8 @@
 @import url(./config/colors.css);
 @import url(./includes/aside.css);
 @import url(./includes/mypost.css);
+@import url(./views/verify.css);
+@import url(./views/create_account.css);
 
 img{
  object-fit: fill;

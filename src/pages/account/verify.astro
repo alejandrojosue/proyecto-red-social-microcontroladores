@@ -1,0 +1,43 @@
+---
+import LayoutAccount from "../../layouts/LayoutAccount.astro";
+---
+
+<LayoutAccount title="Verificar Cuenta">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 login-container">
+        <div class="text-center mb-4">
+          <i class="bi bi-key icono-llave"></i>
+          <!-- Icono de más -->
+          <br />
+          <br />
+          <h2 class="mb-0">Código de verificación</h2>
+        </div>
+        <form>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              id="usuario"
+              placeholder="Ingresar Código"
+            />
+          </div>
+          <button
+            type="submit"
+            class="btn btn-success btn-sm btn-block mx-auto"
+            style="width: 80px; height: 40px; box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);"
+            >Enviar</button
+          >
+        </form>
+        <!-- Enlace "Iniciar Sesión" -->
+        <p class="text-center mt-3 mb-0" style="font-size: 0.6em;">
+          No has recibido el código ? <a
+            href="#"
+            class="login-link"
+            style="font-size: 0.9em;">Reenviar</a
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</LayoutAccount>

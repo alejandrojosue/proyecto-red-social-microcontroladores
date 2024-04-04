@@ -1,0 +1,26 @@
+.login-container {
+ max-width: 350px; /* Ancho máximo */
+ background-color: #fff; /* Color de fondo del contenedor */
+ box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); /* Sombra */
+ padding: 20px; /* Espaciado interno */
+}
+.login-link {
+ color: #28a745; /* Color verde */
+}
+.form-control {
+ border: 2px solid #28a745; /* Borde verde */
+ background-color: #eeeeee; /* Color de fondo gris */
+ padding: 10px; /* Espaciado interno */
+ margin-bottom: 15px; /* Margen inferior */
+}
+.btn-sm-center {
+ display: flex;
+ justify-content: center;
+}
+.icono-persona {
+ font-size: 3em; /* Ajusta el tamaño del icono */
+ color: #28a745; /* Cambia el color del contorno del icono si lo deseas */
+ background-color: #fff; /* Cambia el color del fondo a blanco */
+ border-radius: 50%; /* Haz que el borde sea redondeado */
+ padding: 15px; /* Ajusta el relleno según sea necesario */
+}
