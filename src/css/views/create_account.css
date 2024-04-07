@@ -5,10 +5,10 @@
  padding: 20px; /* Espaciado interno */
 }
 .login-link {
- color: #28a745; /* Color verde */
+ color: #026842; /* Color verde */
 }
 .form-control {
- border: 2px solid #28a745; /* Borde verde */
+ border: 2px solid #026842; /* Borde verde */
  background-color: #eeeeee; /* Color de fondo gris */
  padding: 10px; /* Espaciado interno */
  margin-bottom: 15px; /* Margen inferior */
@@ -19,8 +19,15 @@
 }
 .icono-persona {
  font-size: 3em; /* Ajusta el tamaño del icono */
- color: #28a745; /* Cambia el color del contorno del icono si lo deseas */
+ color: #026842; 
  background-color: #fff; /* Cambia el color del fondo a blanco */
  border-radius: 50%; /* Haz que el borde sea redondeado */
  padding: 15px; /* Ajusta el relleno según sea necesario */
+}
+
+.btn-custom {
+    background-color: #026842; /* Color azul personalizado */
+    /* Otros estilos opcionales */
+    color: #fff; /* Color de texto blanco */
+    border-color: #026842; /* Color de borde igual al de fondo */
 }
