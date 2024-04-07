@@ -8,10 +8,10 @@
 }
 /* Estilos para el enlace "Iniciar Sesión" */
 .login-link {
- color: #28a745; /* Color verde */
+ color: #026842; /* Color verde */
 }
 .form-control {
- border: 2px solid #28a745; /* Borde verde */
+ border: 2px solid #026842; /* Borde verde */
  background-color: #eeeeee; /* Color de fondo gris */
  padding: 10px; /* Espaciado interno */
  border-radius: 5px; /* Borde redondeado */
@@ -23,6 +23,13 @@
 }
 .icono-llave {
  font-size: 3em; /* Tamaño del icono */
- color: #28a745; /* Color del icono */
+ color: #026842; /* Color del icono */
  transform: rotate(90deg); /* Rotar el icono 90 grados hacia abajo */
 }
+.btn-custom {
+    background-color: #026842; /* Color azul personalizado */
+    /* Otros estilos opcionales */
+    color: #fff; /* Color de texto blanco */
+    border-color: #026842; /* Color de borde igual al de fondo */
+}
+
