@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-box {
+            width: 300px;
+            padding: 40px;
+            position: relative;
+            background: #fff;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .login-box h2 {
+            margin: 0 0 20px;
+            padding: 0;
+            color: #333;
+        }
+
+        .textbox {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .textbox input {
+            width: calc(100% - 25px);
+            padding: 10px;
+            background: #f0f0f0;
+            border: none;
+            outline: none;
+            color: #333;
+            font-size: 18px;
+            border-radius: 5px;
+            margin-left: 5px;
+        }
+
+        .textbox i {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #555;
+        }
+
+        .btn-login {
+            width: 100%;
+            background: #4CAF50;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            color: #fff;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .btn-login:hover {
+            background: #45a049;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+            margin-top: 10px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <i class="fas fa-lock fa-4x" style="color: #4CAF50;"></i>
+        <h2>Iniciar Sesión</h2>
+        <form action="procesar_login.php" method="POST">
+            <div class="textbox">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Usuario" name="usuario" required>
+            </div>
+            <div class="textbox">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Contraseña" name="contrasena" required>
+            </div>
+            <input type="submit" class="btn-login" value="Iniciar Sesión">
+        </form>
+        <a href="recuperar_contraseña.html">¿Olvidaste tu contraseña?</a>
+        <a href="crear_cuenta.html">Crear una cuenta</a>
+    </div>
+</body>
+</html>
