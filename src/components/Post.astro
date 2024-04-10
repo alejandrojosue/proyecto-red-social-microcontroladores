@@ -11,8 +11,8 @@ const {
     urlImageUser,
     urlImagePost,
     username,
-    likesCount = 300,
-    description = "Dia duro de trabajo, pero con cristo rey todo es posible.",
+    likesCount,
+    description,
 } = Astro.props;
 ---
 
@@ -82,5 +82,5 @@ const {
         <!-- <button class="share-button"><i class="fas fa-share"></i> <span class="share-count"></span> </button> -->
         <!-- <button class="copy-button"><i class="far fa-copy"></i> </button> -->
     </div>
-    <p class="fw-semibold">Dia duro de trabajo, pero con cristo rey todo es posible.</p>
+    <p class="fw-semibold">{description}</p>
 </div>

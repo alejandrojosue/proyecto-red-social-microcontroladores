@@ -1,25 +1,38 @@
 ---
 import Post from "../components/Post.astro";
 import Layout from "../layouts/Layout.astro";
-import fetchFromApi from "../services/redSocial"
-await fetchFromApi()
+import { getPosts } from "../services/api.post";
+const posts = await getPosts();
+// import fetchFromApi from "../services/redSocial"
+// await fetchFromApi()
 
 // if (!Astro.cookies.get("user")) return Astro.redirect("/lol")
 ---
 
 <Layout title="Home">
-     <Post
+     {
+          posts.map((post) => (
+               <Post
+                    urlImagePost={post.urlImagePost}
+                    username={post.username}
+                    urlImageUser={post.urlImageUser}
+                    likesCount={post.likesCount}
+                    description={post.description}
+               />
+          ))
+     }
+     <!-- // <Post
           urlImagePost={"assets/img/publi1.jpg"}
           username={"Elviz Cruz"}
           urlImageUser={"assets/img/1.jpg"}
           likesCount={300}
           description={"Dia duro de trabajo, pero con cristo rey todo es posible."}
      />
-     <Post
-     urlImagePost={"assets/img/publi1.jpg"}
-     username={"Elviz Cruz"}
-     urlImageUser={"assets/img/1.jpg"}
-     likesCount={300}
-     description={"Dia duro de trabajo, pero con cristo rey todo es posible."}
-/>
+     // <Post
+          urlImagePost={"assets/img/publi1.jpg"}
+          username={"Elviz Cruz"}
+          urlImageUser={"assets/img/1.jpg"}
+          likesCount={300}
+          description={"Dia duro de trabajo, pero con cristo rey todo es posible."}
+     /> -->
 </Layout>
