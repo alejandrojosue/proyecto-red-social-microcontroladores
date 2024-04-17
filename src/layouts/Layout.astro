@@ -32,7 +32,7 @@ const { title = "Home" } = Astro.props;
 		<ViewTransitions />
 	</head>
 
-	<body>
+	<body class="body-layout-desktop">
 		<Navbar />
 
 		<div class="container-fluid">
@@ -51,7 +51,11 @@ const { title = "Home" } = Astro.props;
 				</main>
 			</div>
 		</div>
-
+		<script is:inline>
+			if(innerWidth <= 400){
+				document.querySelector('.body-layout-desktop').classList.add('d-none')
+			}
+		</script>
 		<script
 			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
 			integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"

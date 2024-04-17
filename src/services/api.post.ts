@@ -1,6 +1,7 @@
-import posts from '../db/posts.json'
 import {type Post} from '../types/api.redsocial'
+import fetchFromApi from './redSocial'
 
-export const getPosts = async ():Promise<Array<Post>>=>{
- return await posts as Array<Post>
+export const getPosts = async ():Promise<Post[]>=>{
+ const res = await fetchFromApi('/api/posts?format=json')
+ return res as Post[]
 }

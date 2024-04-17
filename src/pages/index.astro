@@ -1,7 +1,14 @@
 ---
-const apiUrl = import.meta.env.PUBLIC_URL_API_BASE
+import { getPosts } from "../services/api.post";
+const posts = await getPosts()
+console.log(posts);
 
 ---
-
-
+<ul>
+{
+ posts.map(post=>(
+ <li>{post.user.username}</li>
+ ))
+}
+</ul>
 <a href="/home">Home</a>
