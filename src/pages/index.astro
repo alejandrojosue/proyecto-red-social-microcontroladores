@@ -1,14 +1,8 @@
 ---
 import { getPosts } from "../services/api.post";
-const posts = await getPosts()
-console.log(posts);
-
+// const posts = await getPosts()
+// console.log(posts);
+Astro.redirect('/home')
 ---
-<ul>
-{
- posts.map(post=>(
- <li>{post.user.username}</li>
- ))
-}
-</ul>
+
 <a href="/home">Home</a>

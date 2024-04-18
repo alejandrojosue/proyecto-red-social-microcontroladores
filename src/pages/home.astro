@@ -1,15 +1,16 @@
 ---
 import Post from "../components/Post.astro";
 import Layout from "../layouts/Layout.astro";
+import LayoutMobile from "../layouts/Layout_Mobile.astro";
 import { getPosts } from "../services/api.post";
 const posts = await getPosts();
-// console.log(posts[2].image);
+// console.log(posts[1].image);
 
 // if (!Astro.cookies.get("user")) return Astro.redirect("/lol")
 ---
 
 <Layout title="Home">
-     {
+     <!-- {
           posts.map((post) => (
                <Post
                     urlImagePost={post.image}
@@ -19,5 +20,19 @@ const posts = await getPosts();
                     description={post.caption}
                />
           ))
-     }
+     } -->
 </Layout>
+
+<LayoutMobile title="Home">
+     <!-- {
+          posts.map((post) => (
+               <Post
+                    urlImagePost={post.image}
+                    username={post.user.username}
+                    urlImageUser={post.user.profile_image}
+                    likesCount={0}
+                    description={post.caption}
+               />
+          ))
+     } -->
+</LayoutMobile>
